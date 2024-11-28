@@ -8,7 +8,11 @@ edition = "2021"
 repository = "https://github.com/foresterre/cargo-msrv"
 
 keywords = ["msrv", "rust-version", "toolchain", "find", "minimum"]
-categories = ["development-tools", "development-tools::cargo-plugins", "command-line-utilities"]
+categories = [
+    "development-tools",
+    "development-tools::cargo-plugins",
+    "command-line-utilities",
+]
 
 build = "build.rs"
 
@@ -29,9 +33,13 @@ indicatif = "0.17.9" # UI
 once_cell = "1.20.2" # lazy data structures and thunking
 owo-colors = "4.1.0" # color support for the terminal
 petgraph = "0.6.5" # graph data structures
-rust-releases = { version = "0.28.0", default-features = false, features = ["rust-changelog"] } # get the available rust versions
-serde = { version = "1.0", features = ["derive"] } # serialization and deserialization
-serde_json = "1.0.133"  # JSON serialization and deserialization
+rust-releases = { version = "0.28.0", default-features = false, features = [
+    "rust-changelog",
+] } # get the available rust versions
+serde = { version = "1.0", features = [
+    "derive",
+] } # serialization and deserialization
+serde_json = "1.0.133" # JSON serialization and deserialization
 storyteller = "1.0.0" # minimal multi user output architecture
 tabled = { version = "~0.16.0", features = ["ansi"] } # pretty print tables
 terminal_size = "0.4.0" # determine the terminal size
@@ -52,8 +60,20 @@ phenomenon = "~1.0.0"
 assert_fs = "1.1.2"
 
 [build-dependencies]
-vergen = { version = "8.3.2", default-features = false, features = ["build", "cargo", "git", "gitcl", "rustc"] }
+vergen = { version = "8.3.2", default-features = false, features = [
+    "build",
+    "cargo",
+    "git",
+    "gitcl",
+    "rustc",
+] }
 
 [profile.release]
 lto = true
 codegen-units = 1
+
+[patch.crates-io.rust-releases]
+git = "https://github.com/waylyrics/rust-releases.git"
+branch = "support-env-proxy"
+default-features = false
+features = ["rust-changelog"]

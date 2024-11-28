@@ -2066,8 +2066,7 @@ dependencies = [
 [[package]]
 name = "rust-releases"
 version = "0.28.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "22be28a0d21257ad95d8fe4bfedbdbbee744c16f3fd3f7a8518e3eb5d75e0504"
+source = "git+https://github.com/waylyrics/rust-releases.git?branch=support-env-proxy#3414e545e3900418ab815ea8b711b06fccca983e"
 dependencies = [
  "rust-releases-core",
  "rust-releases-rust-changelog",
@@ -2077,8 +2076,7 @@ dependencies = [
 [[package]]
 name = "rust-releases-core"
 version = "0.28.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1bfb5ffbf1c08930303d2d60fe1ac0c50e6d2d7093d481abfaa8c1291fc01e01"
+source = "git+https://github.com/waylyrics/rust-releases.git?branch=support-env-proxy#3414e545e3900418ab815ea8b711b06fccca983e"
 dependencies = [
  "semver",
  "thiserror 1.0.69",
@@ -2087,8 +2085,7 @@ dependencies = [
 [[package]]
 name = "rust-releases-io"
 version = "0.28.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c66be7ab65220ac31f21f99563e07efb28226c2dcf2497d50ced3de08c910202"
+source = "git+https://github.com/waylyrics/rust-releases.git?branch=support-env-proxy#3414e545e3900418ab815ea8b711b06fccca983e"
 dependencies = [
  "directories-next",
  "thiserror 1.0.69",
@@ -2098,8 +2095,7 @@ dependencies = [
 [[package]]
 name = "rust-releases-rust-changelog"
 version = "0.28.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "553667da6c64754d9d17932943012507eb4e6d94d86ca64da9c9bb2454896586"
+source = "git+https://github.com/waylyrics/rust-releases.git?branch=support-env-proxy#3414e545e3900418ab815ea8b711b06fccca983e"
 dependencies = [
  "rust-releases-core",
  "rust-releases-io",
@@ -2110,8 +2106,7 @@ dependencies = [
 [[package]]
 name = "rust-releases-rust-dist"
 version = "0.28.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "627a9611eb8d6d0d2c5128eb36e621d1f81791139b1bb67afde05fd0a7b87a0c"
+source = "git+https://github.com/waylyrics/rust-releases.git?branch=support-env-proxy#3414e545e3900418ab815ea8b711b06fccca983e"
 dependencies = [
  "aws-config",
  "aws-sdk-s3",
